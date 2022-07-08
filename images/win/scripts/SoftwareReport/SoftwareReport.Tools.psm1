@@ -162,6 +162,11 @@ function Get-SVNVersion {
     return "Subversion (SVN) $svnVersion"
 }
 
+function Get-TfsecVersion {
+    $tfsecVersion = (tfsec --version).Replace('v', '')
+    return "Tfsec $tfsecVersion"
+}
+
 function Get-VSWhereVersion {
     ($(Get-Command -Name vswhere).FileVersionInfo.ProductVersion) -match "(?<version>\d+\.\d+\.\d+)" | Out-Null
     $vswhereVersion = $Matches.Version

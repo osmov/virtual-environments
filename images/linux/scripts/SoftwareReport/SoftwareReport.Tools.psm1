@@ -208,6 +208,11 @@ function Get-TerraformVersion {
     return (terraform version | Select-String "^Terraform").Line.Replace('v','')
 }
 
+function Get-TfsecVersion {
+    $tfsecVersion = (tfsec --version).Replace('v', '')
+    return "Tfsec $tfsecVersion"
+}
+
 function Get-JqVersion {
     $jqVersion = jq --version | Take-OutputPart -Part 1 -Delimiter "-"
     return "jq $jqVersion"
