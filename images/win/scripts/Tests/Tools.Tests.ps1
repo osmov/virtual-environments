@@ -145,6 +145,12 @@ Describe "Stack" {
     }
 }
 
+Describe "Tfsec" {
+    It "Tfsec" {
+        "tfsec --version" | Should -ReturnZeroExitCode
+    }
+}
+
 Describe "Vcpkg" {
     It "vcpkg" {
       "vcpkg version" | Should -ReturnZeroExitCode

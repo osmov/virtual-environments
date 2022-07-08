@@ -114,6 +114,7 @@ $toolsList = @(
     (Get-ServiceFabricSDKVersion),
     (Get-StackVersion),
     (Get-SVNVersion),
+    (Get-TfsecVersion),
     (Get-VSWhereVersion),
     (Get-SwigVersion),
     (Get-WinAppDriver),
